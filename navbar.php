@@ -60,6 +60,9 @@
                 </li>
                 <?php }else{  ?>
                 <li class="nav-item">
+                    <a class="nav-link" href="./reg_select.php">แสดงสมาชิก</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="./register.php">สมัครสมาชิก</a>
                 </li>
                 <li class="nav-item">
