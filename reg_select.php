@@ -15,7 +15,7 @@ if (mysqli_num_rows($result) > 0) {
      <td><?php echo "$row[firstname] $row[lastname]"; ?></td>
      <td><?php echo "$row[email]"; ?></td>
      <td>  
-        <a href="reg_edit.php" class="btn btn-info" > Edit </a>
+        <a href="reg_edit.php?id=<?php echo $row[id]; ?>" class="btn btn-info" > Edit </a>
         <a href="reg_delete.php?id=<?php echo $row[id]; ?>" class="btn btn-danger" > Delete </a>
     </td>
   </tr>
