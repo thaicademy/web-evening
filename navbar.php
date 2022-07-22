@@ -50,10 +50,10 @@
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <?php
-                  if($_SESSION['user']){
+                  if($_SESSION['username']){
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./profile.php">Profile <?php echo "$_SESSION[name]";  ?> </a>
+                    <a class="nav-link" href="./profile.php">Profile <?php echo "$_SESSION[username]";  ?> </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./logout.php">Logout</a>
