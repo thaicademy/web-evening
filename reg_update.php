@@ -10,8 +10,12 @@ $sql = "UPDATE tbl_users SET
        WHERE id='$_POST[id]'";
 
 if (mysqli_query($conn, $sql)) {
-  echo "แก้ไขเรียบร้อย";
-  header("location: ./reg_select.php");
+  // echo "แก้ไขเรียบร้อย";
+  // header("location: ./reg_select.php");
+  echo "<script>
+          alert('แก้ไขเรียบร้อย');
+          window.location.href='./reg_select.php';
+        </script>";
 } else {
   echo "ผิดพลาด: " . mysqli_error($conn);
 }
