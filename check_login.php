@@ -8,7 +8,7 @@
       $result = mysqli_query($conn, $sql);
       $row = mysqli_fetch_array($result);
 
-      if($row['username'] == $_POST['username'] || $row['email'] == $_POST['username']  && $row[password] == $_POST['password']){
+      if($row['username'] == $_POST['username'] || $row['email'] == $_POST['username'] && $row[password] == $_POST['password']){
           $_SESSION['username'] = $row['username'];
           header("location: ./dashboard.php");
       }else{
