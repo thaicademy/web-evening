@@ -34,11 +34,11 @@
                         <li><a class="dropdown-item" href="#">บริโภค</a></li>
                         <li><a class="dropdown-item" href="#">อิเล็กทรอนิกส์</a></li>
                         <li><a class="dropdown-item" href="#">เทคโนโลยี</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">สินค้ามือสอง</a></li>
                         <li><a class="dropdown-item" href="#">สินค้าราคาพิเศษ</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="cat_form.php">เพิ่มประเภทสินค้า</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
