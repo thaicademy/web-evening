@@ -10,6 +10,7 @@
 
       if($row['username'] == $_POST['username'] || $row['email'] == $_POST['username'] && $row[password] == $_POST['password']){
           $_SESSION['username'] = $row['username'];
+          $_SESSION['status'] = $row['status'];
           header("location: ./dashboard.php");
       }else{
         echo "<script>

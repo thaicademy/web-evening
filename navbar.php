@@ -50,7 +50,7 @@
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <?php
-                  if($_SESSION['username']){
+                  if($_SESSION['username'] && $_SESSION['status']=="guest"){
                 ?>
                 <li class="nav-item">
                     <a class="nav-link" href="./profile.php">Profile <?php echo "$_SESSION[username]";  ?> </a>
@@ -58,10 +58,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./logout.php">Logout</a>
                 </li>
-                <?php }else{  ?>
-                <li class="nav-item">
+                <?php
+                 } else if($_SESSION['username'] && $_SESSION['status'] == "admin"){
+                ?>
+                 <li class="nav-item">
                     <a class="nav-link" href="./reg_select.php">แสดงสมาชิก</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profile.php">Profile <?php echo "$_SESSION[username]";  ?> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./logout.php">Logout</a>
+                </li>
+                <?php }else{  ?>
                 <li class="nav-item">
                     <a class="nav-link" href="./register.php">สมัครสมาชิก</a>
                 </li>
