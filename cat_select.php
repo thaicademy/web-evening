@@ -15,8 +15,12 @@ if (mysqli_num_rows($result) > 0) {
      <td><?php echo "<a href='cat_detail.php?cid=$row[cid]'> $row[cname] </a>"; ?></td>
      <td><?php echo "$row[cimg]"; ?></td>
      <td>  
+<?php
+if($_SESSION['status'] == "admin"){
+?>
         <a href="cat_edit.php?cid=<?php echo $row[cid]; ?>" class="btn btn-info" > Edit </a>
         <a href="cat_delete.php?cid=<?php echo $row[cid]; ?>" class="btn btn-danger" > Delete </a>
+ <?php } ?>     
         <a href="cat_detail.php?cid=<?php echo $row[cid]; ?>" class="btn btn-primary" > Detail </a>
     </td>
   </tr>
