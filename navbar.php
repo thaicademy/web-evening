@@ -34,7 +34,7 @@
                         ประเภทสินค้า
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php
+                        <?php
                         while($row = mysqli_fetch_assoc($result)) {
                     ?>
                         <li><a class="dropdown-item"
@@ -42,10 +42,14 @@
                         <?php
                      }
                    ?>
+                        <?php
+                         if($_SESSION['status'] == "admin"){
+                        ?>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="cat_form.php">เพิ่มประเภทสินค้า</a></li>
+                        <?php }  ?>
                     </ul>
                 </li>
                 <li class="nav-item">

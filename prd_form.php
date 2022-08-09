@@ -12,35 +12,39 @@ include "navbar.php";
                         <input type="text" name="name" class="form-control" />
                     </div>
                 </div>
-
                 <div class="row pt-2">
                     <div class="col-md-3">รายละเอียด</div>
                     <div class="col-md-9">
-                        <input type="text" name="description" class="form-control" />
+                        <textarea rows="5" class="form-control" name="description"></textarea>
                     </div>
                 </div>
-
                 <div class="row pt-2">
                     <div class="col-md-3">ราคา</div>
                     <div class="col-md-9">
                         <input type="text" name="price" class="form-control" />
                     </div>
                 </div>
-
                 <div class="row pt-2">
                     <div class="col-md-3">จำนวนในคลัง</div>
                     <div class="col-md-9">
                         <input type="text" name="stock" class="form-control" />
                     </div>
                 </div>
-
                 <div class="row pt-2">
                     <div class="col-md-3">ประเภทสินค้า</div>
                     <div class="col-md-9">
-                        <input type="text" name="category" class="form-control" />
+                        <select name="category" class="form-control">
+                            <?php
+                             include "connect.php";
+                             $sql = "SELECT * FROM tbl_category";
+                             $result = mysqli_query($conn, $sql);
+                             while($row = mysqli_fetch_assoc($result)) {
+                               echo "<option value='$row[cname]'> $row[cname] </option>" ;
+                             }
+                            ?>
+                        </select>
                     </div>
                 </div>
-
                 <div class="row pt-2">
                     <div class="col-md-3">แนบไฟล์</div>
                     <div class="col-md-9">
