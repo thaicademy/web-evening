@@ -1,5 +1,9 @@
 <?php
    session_start();
+   include "connect.php";
+   $sql = "SELECT * FROM tbl_category";
+   $result = mysqli_query($conn, $sql);
+
 ?>
 
 <link rel="stylesheet" href="./css/bootstrap.css" />
@@ -30,16 +34,22 @@
                         ประเภทสินค้า
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">อุปโภค</a></li>
-                        <li><a class="dropdown-item" href="#">บริโภค</a></li>
-                        <li><a class="dropdown-item" href="#">อิเล็กทรอนิกส์</a></li>
-                        <li><a class="dropdown-item" href="#">เทคโนโลยี</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">สินค้ามือสอง</a></li>
-                        <li><a class="dropdown-item" href="#">สินค้าราคาพิเศษ</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                    <?php
+                        while($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                        <li><a class="dropdown-item"
+                                href="cat_detail.php?cid=<?php echo"$row[cid]"; ?>"><?php echo"$row[cname]"; ?></a></li>
+                        <?php
+                     }
+                   ?>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item" href="cat_form.php">เพิ่มประเภทสินค้า</a></li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.php">สินค้า</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">วิธีการชำระเงิน</a>
@@ -61,7 +71,7 @@
                 <?php
                  } else if($_SESSION['username'] && $_SESSION['status'] == "admin"){
                 ?>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="./reg_select.php">แสดงสมาชิก</a>
                 </li>
                 <li class="nav-item">
