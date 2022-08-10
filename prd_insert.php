@@ -5,7 +5,7 @@ $sql = "INSERT INTO tbl_products(name, description, price, stock, category, img)
 
 if (mysqli_query($conn, $sql)) {
   echo "บันทึกเรียบร้อย";
-  header("location: ./prd_select.php");
+  header("location: ./product.php");
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
