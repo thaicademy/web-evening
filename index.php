@@ -8,6 +8,10 @@ include 'navbar.php';
     <marquee>
         <h1 style='color:red'> ยินดีต้อนรับเข้าสู่เว็บไซต์ </h1>
     </marquee>
+   <?php
+     include "products.php";
+   ?>
+
 </div>
 
 <?php
