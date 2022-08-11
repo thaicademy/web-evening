@@ -16,7 +16,7 @@ if (mysqli_num_rows($result) > 0) {
      <td> <?php echo "$row[price]"; ?> </td>
      <td> <?php echo "$row[stock]"; ?> </td>
      <td> <?php echo "$row[cactegory]"; ?> </td>
-     <td> <?php echo "$row[img]"; ?> </td>
+     <td> <?php echo "<img src= './images/$row[img]' class='img-fluid' style='max-width:200px' />"; ?> </td>
      <td>  
 <?php
 if($_SESSION['status'] == "admin"){
