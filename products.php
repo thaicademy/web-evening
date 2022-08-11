@@ -14,7 +14,9 @@ $result = mysqli_query($conn, $sql);
       <div class="card-body">
         <h5 class="card-title"><?php echo $row[name] ?></h5>
         <p class="card-text"> <?php echo $row[description] ?> </p>
-      </div>
+        <p>ราคา:  <?php echo $row[price] ?> </p>
+        <p>จำนวน: <?php echo $row[stock] ?> </p>
+     </div>
     </div>
   </div>
 

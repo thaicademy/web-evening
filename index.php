@@ -11,7 +11,6 @@ include 'navbar.php';
    <?php
      include "products.php";
    ?>
-
 </div>
 
 <?php
