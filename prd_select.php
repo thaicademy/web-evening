@@ -22,7 +22,7 @@ if (mysqli_num_rows($result) > 0) {
 if($_SESSION['status'] == "admin"){
 ?>
         <a href="prd_edit.php?id=<?php echo $row[id]; ?>" class="btn btn-info" > Edit </a>
-        <a href="prd_delete.php?id=<?php echo $row[id]; ?>" class="btn btn-danger" > Delete </a>
+        <a href="prd_delete.php?id=<?php echo $row[id]; ?> && img=<?php echo $row[img]; ?> " class="btn btn-danger" > Delete </a>
  <?php } ?>     
         <a href="prd_detail.php?id=<?php echo $row[id]; ?>" class="btn btn-primary" > Detail </a>
     </td>
